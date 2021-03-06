@@ -66,3 +66,76 @@ All Python dependencies are stored in the requirements.txt file. To install them
     brew install unixodbc
     ```
 - Check [here](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos?view=sql-server-ver15) to add SQL Server drivers for Mac.
+
+.env
+
+
+```bash
+# Microsoft SQL Server database
+export SQL_SERVER=
+export SQL_DATABASE=
+export SQL_USER_NAME=
+export SQL_PASSWORD=
+
+# Azure Storage Account
+export BLOB_ACCOUNT=
+export BLOB_STORAGE_KEY=
+export BLOB_CONTAINER=
+
+# Oauth - MSAL and Azure Active Directory
+export CLIENT_SECRET=
+export CLIENT_ID=
+```
+
+In Azure Web Service Configuration:
+
+```json
+[
+  {
+    "name": "BLOB_ACCOUNT",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "BLOB_STORAGE_KEY",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "BLOB_CONTAINER",
+    "value": "cms-images",
+    "slotSetting": false
+  },
+  {
+    "name": "CLIENT_SECRET",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "CLIENT_ID",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "SQL_SERVER",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "SQL_DATABASE",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "SQL_USER_NAME",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "SQL_PASSWORD",
+    "value": "",
+    "slotSetting": false
+  }
+]
+
+```
